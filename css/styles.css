@@ -209,6 +209,35 @@ h3 {
     font-size: 1.05rem;
 }
 
+/* Project filter buttons */
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.filter-button {
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--text);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.filter-button:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.filter-button.active {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+}
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
