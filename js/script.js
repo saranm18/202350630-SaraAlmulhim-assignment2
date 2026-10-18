@@ -9,7 +9,7 @@ if (currentHour < 12) {
 } else {
     greeting.textContent = "Good evening!";
 }
-// filter projects based on the selected category
+// Filter projects based on the selected category
 const filterButtons = document.querySelectorAll(".filter-button");
 const projectCards = document.querySelectorAll(".project-card");
 
@@ -36,18 +36,26 @@ filterButtons.forEach((button) => {
         });
     });
 });
-// switch between dark and light mode
+// Switch between dark and light mode
 const themeToggle = document.getElementById("themeToggle");
+// Load the saved theme when the page opens
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+    themeToggle.textContent = "☀️";
+    themeToggle.setAttribute("aria-label", "Switch to light theme");
+}
 
 themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark-theme");
-
     const isDark = document.body.classList.contains("dark-theme");
     themeToggle.textContent = isDark ? "☀️" : "🌙";
     themeToggle.setAttribute(
         "aria-label",
         isDark ? "Switch to light theme" : "Switch to dark theme"
     );
+    // Save the selected theme
+    localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
 // Contact form interaction: prevent page reload and show user feedback.
