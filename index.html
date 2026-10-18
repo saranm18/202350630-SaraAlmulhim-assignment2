@@ -69,9 +69,15 @@
             <div class="container">
                 <p class="section-label">Projects</p>
                 <h2>Some work I have done!</h2>
+                <!-- Buttons i used to filter projects by category -->
+                <div class="project-filters">
+                    <button class="filter-button active" type="button" data-filter="all">All</button>
+                    <button class="filter-button" type="button" data-filter="java">Java</button>
+                     <button class="filter-button" type="button" data-filter="software">Software Engineering</button>
+                </div>
                 <div class="project-grid">
                      <!-- Cinema Reservation System project -->
-                    <article class="project-card">
+                    <article class="project-card" data-category="java">
                         <img
                             src="assets/images/cinema-project.svg"
                             alt="Illustration placeholder for a cinema reservation system project"
@@ -86,7 +92,7 @@
                         </div>
                     </article>
                     <!-- Parking Reservation App project -->
-                    <article class="project-card">
+                    <article class="project-card" data-category="software">
                         <img
                             src="assets/images/parking-project.svg"
                             alt="Illustration placeholder for a parking reservation application project"
