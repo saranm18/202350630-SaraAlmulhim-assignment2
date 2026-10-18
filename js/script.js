@@ -9,7 +9,33 @@ if (currentHour < 12) {
 } else {
     greeting.textContent = "Good evening!";
 }
+// filter projects based on the selected category
+const filterButtons = document.querySelectorAll(".filter-button");
+const projectCards = document.querySelectorAll(".project-card");
 
+filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const selectedFilter = button.dataset.filter;
+
+        // Update the active filter button
+        filterButtons.forEach((filterButton) => {
+            filterButton.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        // Show only projects that match the selected category
+        projectCards.forEach((project) => {
+            const projectCategory = project.dataset.category;
+
+            if (selectedFilter === "all" || projectCategory === selectedFilter) {
+                project.style.display = "block";
+            } else {
+                project.style.display = "none";
+            }
+        });
+    });
+});
 // switch between dark and light mode
 const themeToggle = document.getElementById("themeToggle");
 
