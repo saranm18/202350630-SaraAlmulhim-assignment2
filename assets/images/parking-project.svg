@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
+<title id="title">Parking reservation app project placeholder</title>
+<desc id="desc">A simple parking sign and car illustration.</desc>
+<rect width="800" height="450" fill="#eef7f5"/>
+<rect x="120" y="70" width="210" height="260" rx="22" fill="#1f7a6f"/>
+<text x="225" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="150" font-weight="800" fill="#ffffff">P</text>
+<rect x="410" y="220" width="240" height="90" rx="28" fill="#4054d8"/>
+<rect x="460" y="170" width="135" height="75" rx="22" fill="#4054d8"/>
+<circle cx="465" cy="315" r="30" fill="#182033"/>
+<circle cx="600" cy="315" r="30" fill="#182033"/>
+<text x="520" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#182033">Parking App</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
+<title id="title">Cinema reservation project placeholder</title>
+<desc id="desc">A simple cinema screen and seats illustration.</desc>
+<rect width="800" height="450" fill="#eef1ff"/>
+<rect x="150" y="70" width="500" height="190" rx="16" fill="#4054d8"/>
+<rect x="180" y="100" width="440" height="130" rx="8" fill="#ffffff"/>
+<g fill="#2f3fb0">
+  <rect x="190" y="315" width="70" height="45" rx="12"/>
+  <rect x="285" y="315" width="70" height="45" rx="12"/>
+  <rect x="380" y="315" width="70" height="45" rx="12"/>
+  <rect x="475" y="315" width="70" height="45" rx="12"/>
+  <rect x="570" y="315" width="70" height="45" rx="12"/>
+</g>
+<text x="400" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#182033">Cinema Project</text>
+</svg>
