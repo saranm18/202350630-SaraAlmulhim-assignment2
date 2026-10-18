@@ -58,19 +58,65 @@ themeToggle.addEventListener("click", () => {
     localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
-// Contact form interaction: prevent page reload and show user feedback.
+// Contact form validation and feedback
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
+const nameError = document.getElementById("nameError");
+const emailError = document.getElementById("emailError");
+const messageError = document.getElementById("messageError");
 
 contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
+    let isValid = true;
+    // Clear previous error messages
+    nameError.textContent = "";
+    emailError.textContent = "";
+    messageError.textContent = "";
+    formStatus.textContent = "";
 
-    const name = document.getElementById("name").value.trim();
+    nameInput.classList.remove("input-invalid");
+    emailInput.classList.remove("input-invalid");
+    messageInput.classList.remove("input-invalid");
 
-    formStatus.textContent =
-        `Thanks${name ? `, ${name}` : ""}! Your message has been received.`;
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
 
-    contactForm.reset();
+    // Check the name
+    if (name === "") {
+        nameError.textContent = "Please enter your name.";
+        nameInput.classList.add("input-invalid");
+        isValid = false;
+    }
+
+    // Check the email
+    if (email === "") {
+        emailError.textContent = "Please enter your email.";
+        emailInput.classList.add("input-invalid");
+        isValid = false;
+    } else if (!email.includes("@") || !email.includes(".")) {
+        emailError.textContent = "Please enter a valid email.";
+        emailInput.classList.add("input-invalid");
+        isValid = false;
+    }
+
+    // Check the message
+    if (message === "") {
+        messageError.textContent = "Please enter a message.";
+        messageInput.classList.add("input-invalid");
+        isValid = false;
+    }
+
+    // Show success feedback only if every field is valid
+    if (isValid) {
+        formStatus.textContent =
+            `Thanks, ${name}! Your message has been received.`;
+
+        contactForm.reset();
+    }
 });
 
 // Keep the footer year current automatically 

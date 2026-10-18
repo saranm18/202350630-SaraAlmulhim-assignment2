@@ -69,11 +69,11 @@
             <div class="container">
                 <p class="section-label">Projects</p>
                 <h2>Some work I have done!</h2>
-                <!-- Buttons i used to filter projects by category -->
+                <!-- Buttons used to filter projects by category -->
                 <div class="project-filters">
                     <button class="filter-button active" type="button" data-filter="all">All</button>
                     <button class="filter-button" type="button" data-filter="java">Java</button>
-                     <button class="filter-button" type="button" data-filter="software">Software Engineering</button>
+                    <button class="filter-button" type="button" data-filter="software">Software Engineering</button>
                 </div>
                 <div class="project-grid">
                      <!-- Cinema Reservation System project -->
@@ -136,7 +136,7 @@
                     </p>
                 </div>
 
-                <form id="contactForm" class="contact-form" action="#" method="post">
+                <form id="contactForm" class="contact-form" action="#" method="post" novalidate>
                     <!-- Name input -->
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -146,7 +146,9 @@
                             type="text"
                             placeholder="Your name"
                             required
+                            aria-describedby="nameError"
                         >
+                        <p id="nameError" class="input-error"></p>
                     </div>
                     <!-- Email input -->
                     <div class="form-group">
@@ -157,7 +159,9 @@
                             type="email"
                             placeholder="name@example.com"
                             required
+                            aria-describedby="emailError"
                         >
+                        <p id="emailError" class="input-error"></p>
                     </div>
                     <!-- Message input -->
                     <div class="form-group">
@@ -168,7 +172,9 @@
                             rows="5"
                             placeholder="Write your message"
                             required
+                            aria-describedby="messageError"
                         ></textarea>
+                        <p id="messageError" class="input-error"></p>
                     </div>
                     <!-- JavaScript displays a confirmation message after submission -->
                     <button class="button primary-button" type="submit">Send Message</button>
