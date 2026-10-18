@@ -170,6 +170,11 @@ h3 {
     font-weight: 800;
     text-decoration: none;
     cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
 }
 
 .primary-button {
@@ -225,11 +230,13 @@ h3 {
     color: var(--text);
     font-weight: 700;
     cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .filter-button:hover {
     border-color: var(--primary);
     color: var(--primary);
+    transform: translateY(-2px);
 }
 
 .filter-button.active {
@@ -251,6 +258,13 @@ h3 {
     border-radius: 18px;
     background: var(--surface);
     box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Lift project cards slightly when the user hovers over them */
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(32, 42, 70, 0.14);
 }
 
 .project-card img {
