@@ -52,3 +52,16 @@ I reviewed the AI-generated suggestions before using them in my project.
 I changed wording, comments, and some code so that the project stayed simple and matched my understanding. I also tested the project filtering, theme preference, form validation, responsive design, and hover effects before considering the features complete.
 
 The final project includes changes and decisions I made while reviewing, testing, and improving the AI suggestions.
+## 5. Usage Log
+
+| ID | Tool (model) | Date | Purpose | Files affected | What you changed and how you verified it |
+|---|---|---|---|---|---|
+| C01 | ChatGPT (GPT-5.6 Sol) | Oct. 18–19, 2026 | Helped interpret Assignment 2 requirements, plan and implement project filtering, save the theme with localStorage, create form validation, add CSS transitions, debug browser caching, test the website, and update documentation. | `index.html`, `css/styles.css`, `js/script.js`, `README.md`, `docs/technical-documentation.md`, `docs/ai-usage-report.md` | I reviewed and modified the suggestions, simplified code and wording, changed comments, and tested the project filters, saved theme, form validation, responsive layout, and hover effects in the browser. |
+
+## 6. Declaration
+
+I declare that this report and the attached evidence document all of my AI use in this assignment, with complete and unedited conversations, and that I understand and can explain all the code I submitted. I understand that undeclared AI use or a false declaration will be treated as plagiarism according to KFUPM regulations.
+
+Name: Sara Almulhim
+ID: 202350630
+Date: 19/10/2026
